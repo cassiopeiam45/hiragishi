@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>治療の流れ｜南平岸矯正歯科</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+      margin: 0;
+      font-family: "Hiragino Kaku Gothic Pro", "Helvetica Neue", sans-serif;
+      background: url('home_background.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .sidebar-toggle {
+      display: none;
+      background-color: #00bcd4;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+      width: 100%;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: rgba(224, 247, 250, 0.95);
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      height: fit-content;
+      align-self: flex-start;
+      order: 0;
+    }
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #006064;
+      margin-bottom: 30px;
+    }
+    .nav {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .nav li {
+      margin-bottom: 12px;
+    }
+    .nav a {
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      background-color: #00bcd4;
+      color: white;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    .nav a:hover {
+      background-color: #0097a7;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 0.85em;
+      color: #555;
+    }
+    .main {
+      flex: 1;
+      padding: 40px;
+      background-color: rgba(255, 255, 255, 0.95);
+      order: 1;
+    }
+    h1 {
+      color: #008b8b;
+      border-bottom: 2px solid #008b8b;
+      padding-bottom: 0.3em;
+    }
+    .step {
+      margin-bottom: 2em;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .step img {
+      max-width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .step-content {
+      flex: 1;
+    }
+    .step h2 {
+      color: #006666;
+      font-size: 1.2em;
+      margin-bottom: 0.2em;
+    }
+    .step p {
+      margin: 0;
+      line-height: 1.6;
+    }
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      .sidebar-toggle {
+        display: block;
+      }
+      .sidebar {
+        width: 100%;
+        box-shadow: none;
+        position: relative;
+        display: none;
+        order: 0;
+      }
+      .sidebar.active {
+        display: block;
+      }
+      .main {
+        padding: 20px;
+        order: 1;
+      }
+      .step {
+        flex-direction: column;
+      }
+      .step img {
+        width: 100%;
+        max-width: none;
+      }
+      #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .tooth {
+      width: 80px;
+      height: 80px;
+      background: url('tooth_character.jpg') no-repeat center center / contain;
+      animation: bounce 4s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    }
+  </style>
+</head>
+<!-- 👇 ここに fade-in を追加 -->
+<body class="index fade-in">
+
+  <!-- ローディング画面 -->
+  <div id="loader">
+    <div class="tooth"></div>
+  </div>
+
+  <!-- ハンバーガーメニュー -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+  <label for="menu-toggle" class="sidebar-toggle">☰ メニューを開く／閉じる</label>
+
+  <!-- サイドバー -->
+  <div class="sidebar">
+    <div class="logo">
+      <img src="logo.png" alt="南平岸矯正歯科のロゴ" />
+    </div>
+    <ul class="nav">
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="clinic.html">クリニック案内</a></li>
+      <li><a href="about.html">矯正治療について</a></li>
+      <li><a href="doctors.html">ドクター紹介</a></li>
+      <li><a href="treatment.html">治療の流れ</a></li>
+      <li><a href="fee.html">治療費について</a></li>
+      <li><a href="mouthpiece.html">マウスピース型矯正装置について</a></li>
+      <li><a href="#access">アクセス・診療時間</a></li>
+    </ul>
+    <div class="footer">
+      キレイな歯であなたにもっと笑顔を！<br />楽しく治療いたします
+    </div>
+  </div>
+
+
+  <div class="main">
+    <h1>治療の流れ</h1>
+
+    <div class="step">
+      <img src="step1.png" alt="初診相談の様子">
+      <div class="step-content">
+        <h2>1. 初診相談（約1時間）</h2>
+        <p>患者さまのお悩みやご希望をお聞かせください。矯正治療の流れ、期間、費用、装置の種類などをご説明し、簡単な口腔内チェックを行います。紹介状がある方はご持参ください。</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="step2.png" alt="精密検査の様子">
+      <div class="step-content">
+        <h2>2. 精密検査（約1時間半）</h2>
+        <p>レントゲン撮影、口腔内写真、歯の型取りなど矯正診断に必要な検査を行います。</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="step3.png" alt="診断の様子">
+      <div class="step-content">
+        <h2>3. 診断（約1時間）</h2>
+        <p>検査結果をもとに、治療計画・期間・費用・装置の種類などをご説明します。治療方針にご納得いただいた上で、治療をスタートします。</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="step4.png" alt="治療装置の装着">
+      <div class="step-content">
+        <h2>4. 治療開始（約1時間半）・装置装着</h2>
+        <p>装置の装着を行います。ブラッシング指導や注意点もお伝えします。</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="step5.png" alt="ワイヤー調整中の様子">
+      <div class="step-content">
+        <h2>5. ワイヤー調整（約30分〜60分）</h2>
+        <p>月に1回程度ご来院いただき、ワイヤーの調整を行います。治療期間は症例により異なりますが、1年半〜2年半ほどが目安です。</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="step6.png" alt="装置除去の様子">
+      <div class="step-content">
+        <h2>6. 装置除去</h2>
+        <p>歯並びや咬み合わせが整い、目標達成後に装置を外します。</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="step7.png" alt="保定期間のチェック">
+      <div class="step-content">
+        <h2>7. 保定・定期健診（約15分・3ヶ月〜半年に1度）</h2>
+        <p>後戻り防止のために保定装置（リテーナー）を使用していただきます。定期的なチェックも行います。</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="step8.png" alt="治療完了後の笑顔">
+      <div class="step-content">
+        <h2>8. 治療完了</h2>
+        <p>歯並び・咬み合わせが安定し、装置の使用が不要になったら治療完了です。気になることがあれば、いつでもご相談ください。</p>
+      </div>
+    </div>
+
+    <footer>
+      &copy; 2025 南平岸矯正歯科
+    </footer>
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      if (loader) {
+        setTimeout(() => {
+          loader.classList.add('fade-out'); // アニメーション開始
+        }, 1500); // ロード表示時間（ms）※調整可能
+      }
+    });
+  </script>
+</body>
+</html>
